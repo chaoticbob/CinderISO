@@ -1,4 +1,5 @@
 /*
+
  Copyright (c) 2010, Hai Nguyen
 
  This code is intended to be used with the Cinder C++ library, http://libcinder.org
@@ -19,4 +20,38 @@
  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
+
+ Addendum To The License
+ * The following libraries are released under the terms of the "Redistributable" portions of the Intel(R) 
+ License Agreement:
+    libimf.a
+    libirc.a
+    libdecimal.lib
+    libirc.lib
+    libmmt.lib
+    svml_disp.lib
+ * By agreeing to licensing terms of CinderISO, you are also agreeing strictly to the "Redistributable" 
+ portions of the Intel(R) License Agreement (as copied from the Intel(R) License Agreement):
+    1. LICENSE DEFINITIONS:
+    B. "Redistributables" are the files listed in the following text files that 
+       may be included in the Materials for the applicable Intel Software Development 
+       Product: clredist.txt, credist.txt, fredist.txt, redist.txt..
+    3. LICENSE RESTRICTIONS:
+    D. DISTRIBUTION:  Distribution of the Redistributables is also subject to the following limitations:  You 
+       (i) shall be solely responsible to your customers for any update or support obligation or other liability 
+       which may arise from the distribution, (ii) shall not make any statement that your product is 
+       "certified", or that its performance is guaranteed, by Intel, (iii) shall not use Intel's name or 
+       trademarks to market your product without written permission, (iv) shall use a license agreement 
+       that prohibits disassembly and reverse engineering of the Redistributables, (v) shall not publish 
+       reviews of Materials designated as beta without written permission by Intel, and (vi) shall indemnify, 
+       hold harmless, and defend Intel and its suppliers from and against any claims or lawsuits, including 
+       attorney's fees, that arise or result from your distribution of any product.
+ * These libraries are intended to be used only with the CinderISO in accordance with the terms specified above.
+ The "AS IS" portion of the above license agreement applies here to the limit that it does not violate or 
+ conflict with the Intel(R) License Agreement. In the event of such violation or conflict, the licensing terms
+ fall back to the allowances and restrictions of the Intel(R) License Agreement.
+ * The author of CinderISO makes no claims (stated or implied) of endorsements, guarantees of performance, or 
+ authorship of the provided above provided libraries. By agreeing to the CinderISO license, you are also agreeing 
+ to these terms.
+
 */
