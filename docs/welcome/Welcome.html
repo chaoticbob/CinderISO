@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<link rel="stylesheet" href="stylesheets/cinder.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="stylesheets/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="stylesheets/jquery.lightbox-0.5.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.lightbox-0.5.css" media="screen" />
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+	<title>CinderISO</title>
+</head>
+<body>
+
+<script type="text/javascript">
+$(function() {
+	$('#simple_image a').lightBox({imageBtnPrev:"stylesheets/prev.png", imageBtnNext:"stylesheets/next.png", imageBtnClose:"stylesheets/close.png", containerResizeSpeed: 150});
+	$('#advanced_image a').lightBox({imageBtnPrev:"stylesheets/prev.png", imageBtnNext:"stylesheets/next.png", imageBtnClose:"stylesheets/close.png", containerResizeSpeed: 150});
+});
+</script>
+
+<div class="wrapper">
+	<div class="header"> 
+		<h1><a href="http://libcinder.org">Cinder</a><h1> 
+	</div> 
+ 
+	<div class="contents">
+		<h1>Welcome to CinderISO</h1>
+		<p>This document is intended only to be a brief overview of the CinderISO library. A more comprehensive tutorial will be available soon. There are two examples provided with the library, Simple and Advanced. The code is straight forward and it doesn't take much to get CinderISO going.</p><br/>
+		<br/>
+
+		<h2>Basics</h2>
+		<p>CinderISO meshes (or polygonizes) a group of particles into a polygonal mesh - also known as <em>metaball</em>. The resulting mesh is stored in a Cinder TriMesh. As far as the meshing processing is concerned, there are a few basic properties that drive the overall meshing process. Each of these properties are discussed in the sections to follow.</p>
+        <br />
+
+		<h2>Grid Size</h2>
+		<p>The grid size controls how many cells are created during the meshing process. Higher grid size values means more cells which means more resolution as wells as more time needed to process. </p>
+        <br />
+        <p>The maximum grid size that's recommended is <em>200</em>. Values greater than 200 may result in a memory allocation error during the meshing process.</p>
+		<br />
+
+		<h2>Particle Radii and Color</h2>
+		<p>CinderISO stores two attributes for each particle, radius and color.</p>
+        <br />
+		<p>The safe range for radius is between <em>1.0</em> and <em>2.5</em>. Values outside that range will either not show up due to a coarse grid size or will produce undesirable results.</p>
+		<br />
+
+		<h2>Field Functions</h2>
+		<p>CinderISO only supports a Blinn style field function. More field functions will be added in upcoming releases. The value of a field function is accumulated based on influencing particles. CinderISO uses a maximum search distance to determine how many particles are influencing a particular point. Anything beyond the maximum search distance is negligible.</p>
+		<br />
+        <p>The maximum search distance defaults to <em>10.0</em></p>
+		<br />
+        
+
+		<h2>Multi-Threading</h2>
+		<p>CinderISO can use one or more threads during the meshing process. Using multiple threads will speed up the meshing process, however the speed up is not linear.</p>
+		<br />
+
+		<h2>Simple Example</h2>
+		<p>This is what the Simple example shoud look like.</p>
+		<br />
+		<center>
+		<div id="simple_image">
+			<a href="images/SimpleSample.png" title="Simple Sample">
+				<img src="images/SimpleSample.png" /></a>
+		</div>
+		</center>
+		<br />
+		
+		<h2>Advanced Example</h2>
+		<p>This is what the Advanced Example should look like. By default, muli-threading is enabled and there is an additional draw wireframe mode.</p>
+		<br />
+		<center>
+		<div id="advanced_image">
+			<a href="images/AdvancedSampleSolid.png" title="Advanced Sample Solid">
+				<img src="images/AdvancedSampleSolid.png" /></a>
+			<a href="images/AdvancedSampleWireFrame.png" title="Advanced Sample WireFrame">
+				<img src="images/AdvancedSampleWireFrame.png" /></a>
+		</div>
+		</center>
+		<br />
+
+		<h2>What's Next?</h2>
+		<p>Stay tuned - more to come soon!</p>
+		<br />
+	</div>
+</div>
+</body>
+</html>
